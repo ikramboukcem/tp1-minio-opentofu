@@ -1,10 +1,10 @@
 # TP Cloud 1 – OpenTofu & MinIO
 
-## 1. Introduction
+##  Introduction
 Mise en place d’un environnement local avec MinIO (stockage S3) et OpenTofu (IaC).  
 Objectif : lancer MinIO, créer un bucket, gérer les fichiers du site statique et déployer via OpenTofu.
 
-## 2. Installation
+##  Installation
 Outils installés :
 - MinIO
 - OpenTofu
@@ -19,14 +19,14 @@ API : http://localhost:9000
 
 Identifiants : minioadmin / minioadmin
 
-## 3. Lancement du serveur MinIO
+## Lancement du serveur MinIO
 Commandes utilisées :
 
 ```powershell
 mkdir C:\minio-data      # créer le dossier où MinIO stocke les données
 minio server C:\minio-data --console-address ":9001"   # lancer le serveur MinIO
 
-## Fichiers créés 
+##  Fichiers créés 
 
 main.tf : provider MinIO + ressources (bucket + objets)
 variables.tf : variables + identifiants sensibles
