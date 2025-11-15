@@ -19,21 +19,22 @@ API : http://localhost:9000
 
 Identifiants : minioadmin / minioadmin
 
-## Lancement du serveur MinIO
-Commandes utilisées :
+## Fichiers et commandes 
 
+Lancement Minio:
 ```powershell
 mkdir C:\minio-data      # créer le dossier où MinIO stocke les données
 minio server C:\minio-data --console-address ":9001"   # lancer le serveur MinIO
 
-##  Fichiers créés 
+##FICHIERS 
 
 main.tf : provider MinIO + ressources (bucket + objets)
 variables.tf : variables + identifiants sensibles
 outputs.tf : affichage du bucket et des objets
 index.html + style.css : site statique
 
-## Commandes utilisé
+## Commandes utilisée :
+
 tofu init   # initialise le projet et télécharge le provider MinIO
 tofu plan -var "minio_user=minioadmin" -var "minio_password=minioadmin"
 # affiche que le bucket + fichiers vont être créés
